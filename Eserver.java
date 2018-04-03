@@ -18,5 +18,8 @@ class Eserver
 			dout.writeUTF(str1); 
 			dout.flush();  
 		}
+		din.close();  
+		s.close();  
+		ss.close(); 
 	}
 }

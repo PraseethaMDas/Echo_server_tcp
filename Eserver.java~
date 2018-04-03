@@ -10,5 +10,13 @@ class Eserver
     	DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
     	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
     	String str="",str1="";  
+    	while(!str.equalsIgnoreCase("stop"))
+    	{  
+			str=din.readUTF();  
+			System.out.println("client says: "+str);  
+			str1= str;  
+			dout.writeUTF(str1); 
+			dout.flush();  
+		}
 	}
 }
